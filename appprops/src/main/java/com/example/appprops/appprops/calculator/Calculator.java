@@ -27,6 +27,7 @@ public class Calculator {
       return operations.stream().filter(operation -> operation.handle(operator)).findFirst()
           .map(operation -> operation.apply(lhs, rhs))
           .orElseThrow(() -> new IllegalArgumentException("No suitable operation found"));
+          
 
         
     }
